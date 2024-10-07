@@ -1,4 +1,5 @@
 import { tabTitle } from "../../TitleFunction/titleFunction";
+import Banner from "./Banner";
 
 const Home = () => {
     //dynamic title
@@ -6,7 +7,7 @@ const Home = () => {
 
     return (
         <div>
-            <h1>i am home</h1>
+            <Banner></Banner>
         </div>
     );
 };

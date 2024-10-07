@@ -31,7 +31,6 @@ const Navbar = () => {
                             {navLinks}
                         </ul>
                     </div>
-
                     <Link to="/"><button className="btn btn-ghost text-xl">MYHOME</button></Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">

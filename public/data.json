@@ -1,0 +1,104 @@
+[
+    {
+        "id": 1,
+        "estate_title": "Luxury Villa in Gulshan",
+        "segment_name": "Residential",
+        "image": "/public/images/img1.jpg",
+        "description": "A luxurious villa with modern amenities in the heart of Gulshan. Perfect for families looking for a premium living experience.",
+        "price": "15,000,000 BDT",
+        "status": "sale",
+        "area": "3500 sq ft",
+        "location": "Gulshan, Dhaka",
+        "facilities": [
+            "Living room",
+            "Swimming pool",
+            "Kitchen",
+            "Private garden",
+            "Garage"
+        ]
+    },
+    {
+        "id": 2,
+        "estate_title": "Modern Apartment in Banani",
+        "segment_name": "Residential",
+        "image": "/public/images/img2.jpg",
+        "description": "A stylish 3-bedroom apartment located in Banani with easy access to local amenities and schools.",
+        "price": "8,500,000 BDT",
+        "status": "sale",
+        "area": "1800 sq ft",
+        "location": "Banani, Dhaka",
+        "facilities": [
+            "Living room",
+            "Rooftop garden",
+            "Kitchen",
+            "Elevator"
+        ]
+    },
+    {
+        "id": 3,
+        "estate_title": "Cozy Studio in Dhanmondi",
+        "segment_name": "Residential",
+        "image": "/public/images/img3.jpg",
+        "description": "A cozy, fully furnished studio apartment ideal for students or young professionals, located in Dhanmondi.",
+        "price": "25,000 BDT/month",
+        "status": "rent",
+        "area": "600 sq ft",
+        "location": "Dhanmondi, Dhaka",
+        "facilities": [
+            "Living room",
+            "Kitchen",
+            "Security"
+        ]
+    },
+    {
+        "id": 4,
+        "estate_title": "Spacious Family House in Uttara",
+        "segment_name": "Residential",
+        "image": "/public/images/img4.jpg",
+        "description": "A spacious family house with a large garden in a quiet neighborhood in Uttara.",
+        "price": "10,000,000 BDT",
+        "status": "sale",
+        "area": "2400 sq ft",
+        "location": "Uttara, Dhaka",
+        "facilities": [
+            "Living room",
+            "Swimming pool",
+            "Kitchen",
+            "Garage",
+            "Backyard"
+        ]
+    },
+    {
+        "id": 5,
+        "estate_title": "Affordable Flat in Mirpur",
+        "segment_name": "Residential",
+        "image": "/public/images/img5.jpg",
+        "description": "An affordable 2-bedroom flat, ideal for small families or individuals, in a well-connected area of Mirpur.",
+        "price": "4,000,000 BDT",
+        "status": "sale",
+        "area": "1200 sq ft",
+        "location": "Mirpur, Dhaka",
+        "facilities": [
+            "Living room",
+            "Kitchen",
+            "Community hall"
+        ]
+    },
+    {
+        "id": 6,
+        "estate_title": "Penthouse with City View in Bashundhara",
+        "segment_name": "Residential",
+        "image": "/public/images/img6.jpg",
+        "description": "A beautiful penthouse with panoramic city views and modern amenities located in the upscale area of Bashundhara.",
+        "price": "12,000,000 BDT",
+        "status": "sale",
+        "area": "2500 sq ft",
+        "location": "Bashundhara, Dhaka",
+        "facilities": [
+            "Living room",
+            "Rooftop terrace",
+            "Swimming pool",
+            "Kitchen"
+        ]
+    }
+]
