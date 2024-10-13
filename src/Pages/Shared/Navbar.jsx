@@ -1,11 +1,21 @@
+import { useContext, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "./AuthProvider";
 
 const Navbar = () => {
+    const [isHovered, setIsHovered] = useState(false);
+    const { user, logOut } = useContext(AuthContext)
+
+    const handleLogout = () => {
+        logOut()
+    }
+
     const navLinks = <>
         <li><NavLink to="/">Home</NavLink></li>
         <li><NavLink to="/updateProfile">Update Profile</NavLink></li>
-        <li><NavLink to="/userProfile">User Profile</NavLink></li>
+        {/* <li><NavLink to="/userProfile">User Profile</NavLink></li> */}
     </>
+    
     return (
         <div>
             <div className="navbar bg-base-100">
@@ -27,7 +37,7 @@ const Navbar = () => {
                         </div>
                         <ul
                             tabIndex={0}
-                            className="  menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                            className=" menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
                             {navLinks}
                         </ul>
                     </div>
@@ -39,7 +49,20 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <Link to="/login"><button className="btn">Login</button></Link>
+                    {
+                        user ? <>
+                            <div>
+                                <div className="avatar relative mt-2">
+                                    <div className="w-14 rounded-full">
+                                        <img onMouseEnter={() => setIsHovered(true)}
+                                            onMouseLeave={() => setIsHovered(false)} src={user.photoURL} />
+                                    </div>
+                                </div>
+                                <p className={`${isHovered ? '' : 'hidden'} absolute top-[70px] z-10`}>{user.displayName}</p>
+                            </div>
+                            <button onClick={handleLogout} className="btn ml-3">Logout</button>
+                        </> : <Link to="/login"><button className="btn">Login</button></Link>
+                    }
                 </div>
             </div>
         </div>
@@ -47,3 +70,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+// top-[70px]
