@@ -29,7 +29,6 @@ const AuthProvider = ({ children }) => {
             setUser(currentUser);
             console.log(currentUser);
             setLoading(false)
-
         })
         return () => {
             unSubscribe()
@@ -51,7 +50,7 @@ const AuthProvider = ({ children }) => {
         return signOut(auth);
     }
 
-    const authInfo = { user, loading, createUser, signInUser, signWithGoogle, signWithTwitter, logOut }
+    const authInfo = { user, setUser, loading, createUser, signInUser, signWithGoogle, signWithTwitter, logOut }
 
     return (
         <AuthContext.Provider value={authInfo}>

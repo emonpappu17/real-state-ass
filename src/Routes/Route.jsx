@@ -7,6 +7,8 @@ import PropertyDetail from "../Pages/PropertyDetail";
 import Register from "../Pages/Register";
 import PrivateRoute from "../Pages/PrivateRoute";
 import UpdateProfile from "../Pages/Shared/UpdateProfile";
+import ChangeProfile from "../Pages/Shared/ChangeProfile";
+
 
 const route = createBrowserRouter([
     {
@@ -32,8 +34,12 @@ const route = createBrowserRouter([
                 loader: () => fetch('data.json')
             },
             {
-                path: 'updateProfile',
-                element: <UpdateProfile></UpdateProfile>
+                path: '/updateProfile',
+                element: <PrivateRoute><UpdateProfile></UpdateProfile></PrivateRoute>
+            },
+            {
+                path: '/changeProfile',
+                element: <PrivateRoute><ChangeProfile></ChangeProfile></PrivateRoute>
             }
         ]
     }

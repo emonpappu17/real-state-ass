@@ -5,6 +5,7 @@ import { AuthContext } from "./AuthProvider";
 const Navbar = () => {
     const [isHovered, setIsHovered] = useState(false);
     const { user, logOut } = useContext(AuthContext)
+    // console.log(user);
 
     const handleLogout = () => {
         logOut()
@@ -13,9 +14,9 @@ const Navbar = () => {
     const navLinks = <>
         <li><NavLink to="/">Home</NavLink></li>
         <li><NavLink to="/updateProfile">Update Profile</NavLink></li>
-        {/* <li><NavLink to="/userProfile">User Profile</NavLink></li> */}
+      
     </>
-    
+
     return (
         <div>
             <div className="navbar bg-base-100">
@@ -55,7 +56,7 @@ const Navbar = () => {
                                 <div className="avatar relative mt-2">
                                     <div className="w-14 rounded-full">
                                         <img onMouseEnter={() => setIsHovered(true)}
-                                            onMouseLeave={() => setIsHovered(false)} src={user.photoURL} />
+                                            onMouseLeave={() => setIsHovered(false)} src={user?.photoURL} />
                                     </div>
                                 </div>
                                 <p className={`${isHovered ? '' : 'hidden'} absolute top-[70px] z-10`}>{user.displayName}</p>
@@ -68,6 +69,5 @@ const Navbar = () => {
         </div>
     );
 };
-
+ 
 export default Navbar;
-// top-[70px]

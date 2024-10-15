@@ -96,7 +96,6 @@
 //         return <div>Loading...</div>;
 //     }
 
-
 import { IoLocationOutline } from "react-icons/io5";
 import { useLoaderData, useParams } from "react-router-dom";
 import { tabTitle } from "../TitleFunction/titleFunction";
@@ -146,7 +145,7 @@ const PropertyDetail = () => {
     }
 
     return (
-        <div className="space-y-5 p-3">
+        <div className="space-y-5 p-3 ">
             <img className="h-[260px] md:h-[400px] lg:h-full max-h-[700px] mx-auto w-full rounded-lg"
                 src={card.image || 'default-image.jpg'} alt={card.estate_title || 'Property'} />
             <div className="flex justify-between mb-3">
