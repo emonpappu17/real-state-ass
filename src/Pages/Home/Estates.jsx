@@ -77,7 +77,7 @@ const Estates = () => {
                                     </p>
                                     <ul className="flex gap-3 flex-wrap">
                                         {
-                                            card.facilities.map((facility, i) => (
+                                            card.facilities?.map((facility, i) => (
                                                 <li key={i} className="text-white font-semibold uppercase px-3 bg-indigo-500 rounded-lg">
                                                     {facility}
                                                 </li>

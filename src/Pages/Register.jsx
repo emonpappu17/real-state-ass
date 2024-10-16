@@ -4,7 +4,7 @@ import {
     Button,
     Typography,
 } from "@material-tailwind/react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { tabTitle } from "../TitleFunction/titleFunction";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -16,8 +16,9 @@ const Register = () => {
 
     //dynamic title
     tabTitle('MYHOME | Register')
+    const navigate = useNavigate()
 
-    const { createUser } = useContext(AuthContext);
+    const { createUser, user, setUser } = useContext(AuthContext);
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -34,7 +35,7 @@ const Register = () => {
             return toast.warn("Password must be at least 6 character")
         }
 
-        console.log(name, email, photoUrl, password);
+        // console.log(name, email, photoUrl, password);
 
         // create User
         createUser(email, password)
@@ -47,11 +48,14 @@ const Register = () => {
                     displayName: name,
                     photoURL: photoUrl
                 })
-                    .then()
+                    .then(() => {
+                        setUser({ ...user, displayName: name, photoURL: photoUrl });
+                    })
                     .catch()
 
                 // clear register field
                 e.target.reset()
+                navigate('/');
             })
             .catch(err => {
                 console.log(err);

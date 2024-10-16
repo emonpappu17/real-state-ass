@@ -84,7 +84,6 @@ const Login = () => {
     // console.log(location);
     const navigate = useNavigate()
 
-
     const handleSubmit = (e) => {
         e.preventDefault()
 
@@ -102,7 +101,7 @@ const Login = () => {
                 e.target.reset();
 
                 // navigate after login
-                navigate(location.state ? location.state : '/')
+                navigate(location?.state ? location.state : '/')
 
             })
             .catch(err => {
@@ -118,7 +117,7 @@ const Login = () => {
                 console.log(result.user, 'google login');
 
                 // navigate after login
-                navigate(location.state ? location.state : '/')
+                navigate(location?.state ? location.state : '/')
             })
             .catch(err => {
                 console.log(err);
@@ -132,7 +131,7 @@ const Login = () => {
                 console.log(result.user, 'twitter login');
 
                 // navigate after login
-                navigate(location.state ? location.state : '/')
+                navigate(location?.state ? location.state : '/')
             })
             .catch(err => {
                 console.log(err);

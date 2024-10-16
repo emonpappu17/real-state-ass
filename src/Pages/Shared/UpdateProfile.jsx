@@ -14,18 +14,12 @@ const UpdateProfile = () => {
     //dynamic title
     tabTitle('MYHOME | Update Profile')
 
-    const { user, loading } = useContext(AuthContext);
-
-    if (loading) {
-        return <div className="min-h-screen flex justify-center items-center">
-            <span className="loading loading-spinner loading-lg"></span>
-        </div>
-    }
-
+    const { user } = useContext(AuthContext);
+    
     return (
-        <div className="flex justify-center">
-            <Card className=" border-2 my-20 px-5" color="transparent" shadow={false}>
-                <CardHeader floated={false} className="max-w-[300px] max-h-[250px] mx-auto border">
+        <div className="flex justify-center items-center h-screen p-3">
+            <Card className="border-2 px-5" color="transparent" shadow={false}>
+                <CardHeader floated={false} className="max-w-[300px] max-h-[250px] mx-auto">
                     <img className="w-full h-full" src={user.photoURL} alt="profile-picture" />
                 </CardHeader>
                 <form className="max-w-screen-lg sm:w-96">

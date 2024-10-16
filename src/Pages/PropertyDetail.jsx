@@ -113,7 +113,7 @@ const PropertyDetail = () => {
     useEffect(() => {
         if (loaderData && Array.isArray(loaderData)) {
             const gotCard = loaderData.find(card => card.id === idInt);
-            console.log(idInt)
+            // console.log(idInt)
             if (gotCard) {
                 setCard(gotCard);
                 setIsLoading(false);
@@ -124,13 +124,13 @@ const PropertyDetail = () => {
                 .then(response => response.json())
                 .then(data => {
                     const gotCard = data.find(card => card.id === idInt);
-                    console.log(idInt)
+                    // console.log(idInt)
                     setCard(gotCard);
                     setIsLoading(false);
                 })
                 .catch(error => {
                     console.error('Error fetching data:', error);
-                    console.log(idInt)
+                    // console.log(idInt)
                     setIsLoading(false);
                 });
         }
